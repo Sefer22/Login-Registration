@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+<body>
+<h2>Login Form</h2>
+
+<div>
+    <p style="color:red "th:text="${error}"></p>
+</div>
+<div>
+    <p style="color:green "th:text="${logout}"></p>
+</div>
+<form th:action={/login} method="post">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" id="email" required><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" id="password" required><br>
+
+    <input type="submit" value="Login">
+    <div>
+        <p>Do not have an account? <a href="/register">Register</a></p>
+    </div>
+
+</form>
+</body>
+</html>
